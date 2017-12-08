@@ -1,0 +1,86 @@
+#header{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    background-color: black;
+}
+#ted{
+    justify-content: flex-start;
+}
+#logo{
+    border-radius: 0px;
+    max-height: 50px;
+}
+.heading{
+    color: white;
+    padding: 15px;
+    font-weight: 200;
+}
+#login{
+    margin:5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: rgba(0,0,0,0.79) ;
+}
+div.heading:hover{
+    color: rgba(208,39,38,0.79);
+    background-color: white;
+}
+#team{
+    max-height: 200%;
+    text-align: center;
+    font-family: "Courier New";
+    color: white;
+    background-color: rgba(208,39,38,0.79);
+    padding: 20pt;
+}
+#council{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+.member{
+    padding: 10px;
+    text-align: center;
+}
+#core{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+#organising{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+.members{
+    padding: 25px;
+    margin: 25px;
+    text-align: center;
+}
+#footer{
+    max-height: 200%;
+    text-align: center;
+    font-family: Garamond;
+    color: darkgray;
+    background-color: lightgrey;
+    padding: 20pt;
+}
+div{
+    text-align: center;
+}
+img{
+    max-height: 200px;
+    max-width: 200px;
+     border-radius: 50%;
+}
