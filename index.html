@@ -1,62 +1,281 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>DTU Team</title>
-    <link rel="icon" href="https://tedxdtu2018staticfiles.s3.amazonaws.com/Main/favicon/favicon.png">
-    <link rel="stylesheet" href="styling.css">
+    <title>TEDxDTU &middot; Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://use.fontawesome.com/ae71f5ebfe.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600|Raleway:300,400,600,700" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.png">
+    <script type="text/javascript" src="js/common.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,500,600|Raleway:300,400,600,700" rel="stylesheet">
+	<style>
+* {
+  font-family: "Hind Siliguri", sans-serif;
+ }
+
+input, button, textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+  resize: none; }
+
+		form {
+  width: 80%;
+  margin: auto; }
+
+.section-title {
+  color: #191e26;
+  font-size: 1.5em;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  padding : 20px;
+margin : auto;  
+margin-left:10px;
+}
+
+		.field {
+  font-size: .9em;
+  font-weight: 700;
+  color: #d12838;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Raleway", sans-serif}
+  
+	.required:after {
+  content: '(Required)';
+  margin-left: 15px;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.5); }
+
+input {
+  width: 50%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #FFF;
+  color: #191e26;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+input:focus {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); }
+	
+	.button, input[type="submit"] {
+  position: relative;
+  left: 50%;
+  width: 130px;
+  text-align: center;
+  padding: 15px;
+  background: #d12838;
+  color: #FFF;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 10px;
+  transform: scale(0.8) translate(-50%, 0);
+  margin-top: 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .button .fa, input[type="submit"] .fa {
+    margin-right: 5px; }
+
+	.button, input[type="submit"] {
+  position: relative;
+  left: 50%;
+  width: 130px;
+  text-align: center;
+  padding: 15px;
+  background: #d12838;
+  color: #FFF;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 10px;
+  transform: scale(0.8) translate(-50%, 0);
+  margin-top: 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .button .fa, input[type="submit"] .fa {
+    margin-right: 5px; }
+
+	
+input[type="submit"] {
+  width: 220px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+
+input[type="submit"]:hover {
+  background: #191e26; }
+
+.button.disabled {
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none; }
+
+.button:hover {
+  background: #191e26; }
+
+.radio-wrapper {
+  margin-bottom: 25px; }
+  
+  input[type="radio"] {
+  position: relative;
+  background: none;
+  color: #191e26;
+  font-size: 1em;
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  vertical-align: center; }
+
+input[type="radio"]:before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background: none;
+  border-radius: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  top: -18px; }
+
+input[type="radio"]:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: -14px;
+  height: 8px;
+  width: 8px;
+  background: #d12838;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  transform: scale(0);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+input[type="radio"]:checked:before {
+  border: 2px solid #d12838; }
+
+input[type="radio"]:checked:after {
+  transform: scale(1); }
+  
+  .option {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center; }
+
+	label {
+    padding: 10px 30px;
+    position: relative;
+    top: -2px; }
+  </style
 </head>
 <body>
-<div id="header">
-    <div id="ted"><img src="tedlogo.jpg" id="logo"></div>
-    <div class="heading">Home</div>
-    <div class="heading">About</div>
-    <div class="heading">Speakers</div>
-    <div class="heading">PastEvents</div>
-    <div class="heading">Theme</div>
-    <div class="heading">Team</div>
-    <div class="heading">Partners</div>
-    <div class="heading" id="login">Login</div>
-</div>
-<div id="team"><h1>OUR TEAM</h1></div>
-<div style="display: block"><h1>COUNCIL</h1></div>
-<div id="council">
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-</div>
-<div style="display: block"><h1>CORE COMMITTEE</h1></div>
-<div id="core">
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-    <div class="member"><img src="candidate.jpg"><br><b>Name</b><br>Position</div>
-</div>
-<div><h1>ORGANISING COMMITTEE</h1></div>
-<div id="organising">
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-    <div class="members"><b>Name</b><br>Team</div>
-</div>
-<div id="footer"><p>This independent TEDx Event is operated under license from TED.<br>TEDxDTU 2018 Official Website.</p>
-</div>
+<header>
+    <div class="logo"><img src="img/LogoWhite.png" draggable="false"></div>
+    <div class="links-wrapper">
+        <a href="http://www.tedxdtu.in/"><div class="link">Home</div></a>
+        <a href="http://www.tedxdtu.in/about/"><div class="link">About</div></a>
+        <a href="http://www.tedxdtu.in/speakers/"><div class="link">Speakers</div></a>
+        <a href="http://www.tedxdtu.in/2017/"><div class="link">Past Events</div></a>
+        <a href="http://www.tedxdtu.in/theme/"><div class="link">Theme</div></a>
+        <a href="http://www.tedxdtu.in/team/"><div class="link">Team</div></a>
+        <a href="http://www.tedxdtu.in/partner/"><div class="link">Partner</div></a>
+        <a href="http://www.tedxdtu.in/login/"><div class="link login">Login</div></a>
+    </div>
+    <div class="hamburger">
+        <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+    </div>
+</header>
+<nav>
+    <div class="nav-wrapper">
+        <a href="http://www.tedxdtu.in/"><div class="link">Home</div></a>
+        <a href="http://www.tedxdtu.in/about/"><div class="link">About</div></a>
+        <a href="http://www.tedxdtu.in/speakers/"><div class="link">Speakers</div></a>
+        <a href="http://www.tedxdtu.in/2017/"><div class="link">Past Events</div></a>
+        <a href="http://www.tedxdtu.in/theme/"><div class="link">Theme</div></a>
+        <a href="http://www.tedxdtu.in/team/"><div class="link">Team</div></a>
+        <a href="http://www.tedxdtu.in/partner/"><div class="link">Partner</div></a>
+        <a href="http://www.tedxdtu.in/login/"><div class="link login">Login</div></a>
+    </div>
+</nav>
+
+<section>
+	<div class="section-title">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					Register Attendee
+	</div>
+        <form method="POST" action="/registrationform">
+            <div class="field required">Full Name</div>
+			<input name="Name" id="full-name" type="text" placeholder="Enter full name" value="">
+			
+			<div class="radio-wrapper" id="genderFields">
+					<div class="field">Gender</div>
+					
+					<div class="option"><input type="radio" name="nomineeGender" value="Male" id="Male"><label for="Male">Male</label></div>
+					<div class="option"><input type="radio" name="nomineeGender" value="Female" id="Female"><label for="Female">Female</label></div>
+					<div class="option"><input type="radio" name="nomineeGender" value="Other" id="Other" checked><label for="Other">Other</label></div>	
+			</div>
+            
+            <div class="field required">E-Mail</div>
+			<input name="Email" id="email" type="text" placeholder="Enter e-mail address" value="">
+            
+            <div class="field required">Contact Number</div>
+			<input name="Number" id="phone" type="text" placeholder="Enter phone number" value="">
+            
+			<div class="field required">Address</div>
+            <input name="Address" id="Address" type="text" placeholder="Enter your Address" value="">
+			
+			<div class="field required">City</div>
+            <input name="City" id="city" type="text" placeholder="Enter City name" value="">
+			
+			<div class="field required">Country</div>
+            <input name="country" id="country" type="text" placeholder="Enter Country name" value="">
+			
+			<div class="field required">How did you come to know of TEDxDTU 2018?</div>
+            <input name="cometoknow" id="cometoknow" type="text" placeholder="Your response" value="">
+			
+			<div class="field required">Why do you want to attend TEDxDTU 2018?</div>
+            <input name="attend" id="attend" type="text" placeholder="Your response" value="">
+			
+			<div class="field required">What Ideas according to you are worth spreading?</div>
+            <input name="ideas" id="ideas" type="text" placeholder="Share it with Us" value="">
+			
+			<div class="button disabled"><i class="fa fa-check" aria-hidden="true"></i>Submit</div>
+		</form>
+		</div>
+</section>
+<footer>
+    <p>This independent TEDx event is operated under license from TED</p>
+    <p>TEDxDTU 2018 &middot; Official Website</p>
+</footer>
+<div class="dark-screen"></div>
 </body>
 </html>
